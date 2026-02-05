@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 30/01/2026 16:01:18
+// Generated at 05/02/2026 16:19:05
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -8,10 +8,25 @@ namespace ACC_PROCESSES {
 function _InitLibrary() { }
 function _ExitLibrary() { }
 function Abstract(  ) void { }
+function HHS_Heat( variable intTemp ) void { }
+function HHS_Shake( variable intSpeed ) void { }
+function PIP_5mL_ResToHHS_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_ResToTilt_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_ResToTilt_PBS( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_ResToTilt_TrypLE( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_TiltToFalcon_Cells( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_TiltToWaste_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_TiltToWaste_PBS( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function System_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence ) void { }
+function TILT_Angle( variable intTiltAngle ) void { }
+function TILT_Sway(  ) void { }
+function TMR_Start(  ) void { }
+function TMR_WaitFor(  ) void { }
+function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device & ML_STAR ) void { }
 } // namespace
 #endif
 
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-01-30 16:01$$checksum=2f601f85$$length=081$$
+// $$author=ch33$$valid=0$$time=2026-02-05 16:19$$checksum=81ee025e$$length=081$$

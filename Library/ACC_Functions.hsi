@@ -1,0 +1,73 @@
+// {{{ 2 "IncludeGuard" "PragmaOnce"
+#pragma once
+// }} ""
+#include "ACC_Processes.hs_"
+/* {{ 2 "LibraryInsertLine" "" */ // }} ""
+// {{ 2 "TemplateIncludeBlock" ""
+#include "HSLMETEDLib.hs_"
+#include "HSLMECCLib.hs_"
+#include "HSLPTLLib.hsl"
+// }} ""
+// {{{ 2 "LibraryNamespace" "Begin"
+namespace ACC_FUNCTIONS {
+// }} ""
+/* {{ 2 "VariableInsertLine" "" */ // }} ""
+// {{{ 2 "SubmethodForwardDeclaration" ""
+function Abstract(  ) void ;
+function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqPBSRes, sequence seqFlask, sequence seqWaste, variable intVolume ) void ;
+// }} ""
+function _InitLibrary() {
+// {{ 2 "AutoInitBlock" ""
+PTL::SetWashingStateDefault("RinseTime1", 5);
+PTL::SetWashingStateDefault("SoakTime1", 5);
+PTL::SetWashingStateDefault("FlowRate1", 11);
+PTL::SetWashingStateDefault("RinseTime2", 0);
+PTL::SetWashingStateDefault("SoakTime2", 0);
+PTL::SetWashingStateDefault("FlowRate2", 11);
+PTL::SetWashingStateDefault("DrainingTime", 10);
+PTL::SetWashingStateDefault("StartWashLiquid", 0);
+PTL::SetLoadingStateDefault("RecoveryOptionContinue", hslTrue);
+PTL::SetLoadingStateDefault("RecoveryOptionExclude", hslTrue);
+PTL::SetLoadingStateDefault("RecoveryOptionDefault", 0);
+PTL::SetLoadingStateDefault("KitLotCheckEnabled", hslFalse);
+ACC_PROCESSES::_InitLibrary();
+// }} ""
+}
+function _ExitLibrary() {
+// {{ 2 "AutoExitBlock" ""
+ACC_PROCESSES::_ExitLibrary();
+// }} ""
+}
+// {{{ 5 "Abstract" "Begin"
+function Abstract(  ) void {
+// }} ""
+// {{ 5 "Abstract" "InitLocals"
+// }} ""
+// {{ 1 1 0 "327601da_ad06_4675_ab7c31bfddb3eeea" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+
+// }} ""
+// {{{ 5 "Abstract" "End"
+}
+// }} ""
+// {{{ 5 "PIP_Tilt_PBSWash" "Begin"
+function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqPBSRes, sequence seqFlask, sequence seqWaste, variable intVolume ) void {
+// }} ""
+// {{ 5 "PIP_Tilt_PBSWash" "InitLocals"
+// }} ""
+// {{{ 3 1 0 "124a319a_8eed_4d3f_86a5dc5171a12be2" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_ResToTilt_PBS(ML_STAR, seqPBSRes, seqFlask, intVolume);
+// }} ""
+// {{{ 4 1 0 "cdac1846_a784_41b7_ad83d7d8f275a2d9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::TILT_Sway();
+// }} ""
+// {{{ 5 1 0 "084e23b9_9191_4f03_a06132fb7e771d93" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_TiltToWaste_PBS(ML_STAR, seqFlask, seqWaste, intVolume);
+// }} ""
+// {{{ 5 "PIP_Tilt_PBSWash" "End"
+}
+// }} ""
+/* {{ 2 "SubmethodInsertLine" "" */ // }} ""
+// {{{ 2 "LibraryNamespace" "End"
+} // library namespace
+// }} ""
+// $$author=ch33$$valid=0$$time=2026-02-05 15:55$$checksum=e54c84ad$$length=083$$
