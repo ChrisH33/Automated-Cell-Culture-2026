@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 05/02/2026 16:19:05
+// Generated at 16/02/2026 08:21:48
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -10,11 +10,14 @@ function _ExitLibrary() { }
 function Abstract(  ) void { }
 function HHS_Heat( variable intTemp ) void { }
 function HHS_Shake( variable intSpeed ) void { }
+function PIP_5mL_ResToHHS( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function PIP_5mL_ResToHHS_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_ResToTilt( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_ResToTilt_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function PIP_5mL_ResToTilt_PBS( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function PIP_5mL_ResToTilt_TrypLE( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function PIP_5mL_TiltToFalcon_Cells( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
+function PIP_5mL_TiltToWaste( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToWaste_Media( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function PIP_5mL_TiltToWaste_PBS( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume ) void { }
 function System_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence ) void { }
@@ -29,4 +32,4 @@ function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device &
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-02-05 16:19$$checksum=81ee025e$$length=081$$
+// $$author=ta16$$valid=0$$time=2026-02-16 08:21$$checksum=b1b26226$$length=081$$
