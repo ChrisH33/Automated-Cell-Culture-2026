@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 06/03/2026 10:58:58
+// Generated at 06/03/2026 11:31:27
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -13,13 +13,13 @@ function HHS_Shake( variable intSpeed ) void { }
 function PIP_5mL_ResToFlask( device & ML_STAR, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToFalcon( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToWaste( device & ML_STAR, sequence & seqSource, variable intVolume, variable intLiquidType ) void { }
-function SYSTEM_Abort( device & ML_STAR, variable blnSimulationMode ) void { }
-function SYSTEM_Close( device & ML_STAR, variable blnSimulationMode ) void { }
-function SYSTEM_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence, variable & blnSimulationMode, sequence seq_PBS, sequence seq_Media, sequence seq_TrypLE, sequence seq_Waste ) void { }
-function TILT_Angle( variable blnSimulationMode, variable intTiltAngle ) void { }
-function TILT_Open( variable blnSimulationMode ) void { }
-function TILT_Sway( variable blnSimulationMode, variable intSpeed, variable intEndAngle, variable intTime ) void { }
-function TMR_Start( variable blnSimulationMode, timer & strTimer, variable intTime ) void { }
+function SYSTEM_Abort( device & ML_STAR ) void { }
+function SYSTEM_Close( device & ML_STAR ) void { }
+function SYSTEM_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence, sequence seq_PBS, sequence seq_Media, sequence seq_TrypLE, sequence seq_Waste, variable blnSim ) void { }
+function TILT_Angle( variable intTiltAngle ) void { }
+function TILT_Lock( variable blnGripState ) void { }
+function TILT_Sway( variable intSpeed, variable intEndAngle, variable intTime ) void { }
+function TMR_Start( timer & strTimer, variable intTime ) void { }
 function TMR_WaitFor( timer & strTimer, variable & rtnTimerStopped ) void { }
 function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device & ML_STAR ) void { }
 } // namespace
@@ -28,4 +28,4 @@ function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device &
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-03-06 10:58$$checksum=aa9f8dd7$$length=081$$
+// $$author=ch33$$valid=0$$time=2026-03-06 11:31$$checksum=49df5cb6$$length=081$$
