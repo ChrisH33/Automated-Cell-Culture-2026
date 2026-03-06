@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 06/03/2026 11:31:27
+// Generated at 06/03/2026 11:56:01
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -9,6 +9,7 @@ function _InitLibrary() { }
 function _ExitLibrary() { }
 function Abstract(  ) void { }
 function HHS_Heat( variable intTemp ) void { }
+function HHS_Lock( variable blnGripState ) void { }
 function HHS_Shake( variable intSpeed ) void { }
 function PIP_5mL_ResToFlask( device & ML_STAR, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToFalcon( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
@@ -28,4 +29,4 @@ function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device &
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-03-06 11:31$$checksum=49df5cb6$$length=081$$
+// $$author=ch33$$valid=0$$time=2026-03-06 11:56$$checksum=82dd89a8$$length=081$$
