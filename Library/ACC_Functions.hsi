@@ -15,7 +15,7 @@ namespace ACC_FUNCTIONS {
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function Abstract(  ) void ;
-function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqPBSRes, sequence seqFlaskAsp, sequence seqFlaskDisp, sequence seqWaste, variable intVolume ) void ;
+function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqFlaskAsp, sequence seqFlaskDisp, variable intVolume ) void ;
 // }} ""
 function _InitLibrary() {
 // {{ 2 "AutoInitBlock" ""
@@ -51,7 +51,7 @@ function Abstract(  ) void {
 }
 // }} ""
 // {{{ 5 "PIP_Tilt_PBSWash" "Begin"
-function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqPBSRes, sequence seqFlaskAsp, sequence seqFlaskDisp, sequence seqWaste, variable intVolume ) void {
+function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqFlaskAsp, sequence seqFlaskDisp, variable intVolume ) void {
 // }} ""
 private variable intLiquidType;
 private variable blnSimulationMode;
@@ -63,14 +63,14 @@ blnSimulationMode = HSLML_STAR::IsSimulatorMode(ML_STAR);
 // {{ 4 1 0 "6c881ecb_85cb_4528_845392361f2df973" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 intLiquidType = 1;
 // }} ""
-// {{{ 5 1 0 "207d2238_4c0f_41ea_8154b45d36b5d3f9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::PIP_5mL_ResToTilt(ML_STAR, seqPBSRes, seqFlaskDisp, intVolume, intLiquidType);
+// {{{ 5 1 0 "904ce077_dccf_464b_ba722c0f7fac693f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_ResToFlask(ML_STAR, seqFlaskDisp, intVolume, intLiquidType);
 // }} ""
 // {{{ 6 1 0 "b1bf59e9_94c5_482c_bb03599a888ccc6b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::TILT_Sway(blnSimulationMode, 10, 10, 15);
 // }} ""
-// {{{ 7 1 0 "cb28377f_5472_4963_89c4945dd924b99f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, seqFlaskAsp, seqWaste, intVolume, intLiquidType);
+// {{{ 7 1 0 "d92178aa_bab4_4767_92dfd94c8801d09d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, seqFlaskAsp, intVolume, intLiquidType);
 // }} ""
 // {{{ 5 "PIP_Tilt_PBSWash" "End"
 }
@@ -79,4 +79,4 @@ ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, seqFlaskAsp, seqWaste, intVolume, in
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2026-03-04 16:19$$checksum=9b52774d$$length=087$$
+// $$author=ch33$$valid=0$$time=2026-03-06 10:49$$checksum=808f5847$$length=083$$

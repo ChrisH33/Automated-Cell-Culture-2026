@@ -44,8 +44,8 @@ ACC_FUNCTIONS::_InitLibrary();
 // {{ 1 1 0 "119d0dd3_1686_4762_b19305c0ec81cfcc" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 MECC::TraceComment(Translate("******************************************************************************************************************************************************\n                                                            Method Details\n******************************************************************************************************************************************************\nMethod:          Cell Culturing for the MAVE_SGE project\nVersion:         0.1\nDescription:     Check SOPs \nSoftware:        Venus 4 (v 4.5.0.7977)\nAuthor:          Chris Henderson, Tobi Ajenifuja\n------------------------------------------------------------------------------------------------------------------------------------------------------"));
 // }} ""
-// {{{ 2 1 0 "f2c774dc_0fa5_40d0_8cc95354c61ea59b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::SYSTEM_Init(ML_STAR, ML_STAR.COREGripTool_OnWaste_1000ul_0001, ML_STAR.Tips_4mLFiltered, blnSimulationMode);
+// {{{ 2 1 0 "113545fc_78ed_4063_b68fcd2aa041f9c6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::SYSTEM_Init(ML_STAR, ML_STAR.COREGripTool_OnWaste_1000ul_0001, ML_STAR.Tips_4mLFiltered, blnSimulationMode, ML_STAR.res_PBS_XL, ML_STAR.res_Media_XL, ML_STAR.res_TrypLE_XL, ML_STAR.res_Waste_XL);
 // }} ""
 /* {{ 1 "" "0" */ if(0){  /* }} "" */
 // {{{ 3 1 0 "d9c8265e_7551_41ec_8085c402e0acc289" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
@@ -58,14 +58,14 @@ ACC_PROCESSES::TRP_OneWell_CORE(ML_STAR.Trp_OneWell_Loading, ML_STAR.Trp_OneWell
 // {{ 5 1 0 "fe05edcb_0d26_443e_bf6798a6ef58d130" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
-// {{{ 6 1 0 "4770e2bd_3774_4162_8c8f1c84fa50122a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, ML_STAR.Pip_OneWell_Tilt_Asp, ML_STAR.res_Waste_XL, 15000, 0);
+// {{{ 6 1 0 "f1bf2b72_1d1f_4457_8e9aa90f6dc76631" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, ML_STAR.Pip_OneWell_Tilt_Asp, 15000, 0);
 // }} ""
-// {{{ 7 1 0 "ca21d1b6_822c_45b9_b5156c406fcbcc7a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_FUNCTIONS::PIP_Tilt_PBSWash(ML_STAR, ML_STAR.res_PBS_XL, ML_STAR.Pip_OneWell_Tilt_Asp, ML_STAR.Pip_OneWell_Tilt_Disp, ML_STAR.res_Waste_XL, 5000);
+// {{{ 7 1 0 "9a50106a_6dee_40a4_8b488933ea14555a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_FUNCTIONS::PIP_Tilt_PBSWash(ML_STAR, ML_STAR.Pip_OneWell_Tilt_Asp, ML_STAR.Pip_OneWell_Tilt_Disp, 5000);
 // }} ""
-// {{{ 8 1 0 "1d62b70f_0dc6_4768_b82d24a4a089ac4d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::PIP_5mL_ResToTilt(ML_STAR, ML_STAR.res_TrypLE_XL, ML_STAR.Pip_OneWell_Tilt_Disp, 5000, 2);
+// {{{ 8 1 0 "be46d39b_cc4e_4062_a0a13084d4b971e6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_ResToFlask(ML_STAR, ML_STAR.Pip_OneWell_Tilt_Disp, 5000, 2);
 // }} ""
 // {{{ 9 1 0 "3bb90676_60ca_415c_a6c9b8779c97219d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::TRP_OneWell_CORE(ML_STAR.Trp_OneWell_Tilt, ML_STAR.Trp_OneWell_HHS, ML_STAR);
@@ -93,8 +93,8 @@ ACC_PROCESSES::HHS_Shake(blnSimulationMode, 0);
 // {{ 16 1 0 "a0d47e98_fd9c_4e0e_8bb9ff2d5c210209" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{{ 17 1 0 "3996d42f_caef_4dc1_a018f6ac84e58866" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ACC_PROCESSES::PIP_5mL_ResToHHS(ML_STAR, ML_STAR.res_Media_XL, ML_STAR.Pip_OneWell_HHS, 5000, 0);
+// {{{ 17 1 0 "e41f8126_c610_4169_83627a2a1e18c840" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::PIP_5mL_ResToFlask(ML_STAR, ML_STAR.Pip_OneWell_HHS, 5000, 0);
 // }} ""
 // {{{ 18 1 0 "37987ad7_6fde_4608_902d22c07a7f956d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::HHS_Shake_Timed(blnSimulationMode, 500, 30);
@@ -156,4 +156,4 @@ ACC_FUNCTIONS::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=Hamilton$$valid=0$$time=2026-03-05 15:34$$checksum=1064aa77$$length=087$$
+// $$author=ch33$$valid=0$$time=2026-03-06 10:49$$checksum=c280fa03$$length=083$$
