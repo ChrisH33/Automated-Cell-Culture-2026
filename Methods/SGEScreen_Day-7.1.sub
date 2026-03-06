@@ -6,20 +6,20 @@ function OnAbort(  ) void {
 // }} ""
 // {{ 5 "OnAbort" "InitLocals"
 // }} ""
-// {{{ 36 1 0 "41b93e9c_ada6_4675_99997f9542c09c2f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 24 1 0 "41b93e9c_ada6_4675_99997f9542c09c2f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::SYSTEM_Abort(ML_STAR, blnSimulationMode);
 // }} ""
 /* {{ 1 "" "0" */ if(0){  /* }} "" */
-// {{ 37 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 25 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 38 1 0 "57ebb88e_b406_459e_ae37ae3951d0ddbe" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 26 1 0 "57ebb88e_b406_459e_ae37ae3951d0ddbe" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 MECC::TraceComment(Translate("######################################\n\n                            METHOD ABORTED\n\n######################################"));
 // }} ""
-// {{ 39 1 0 "6df03040_0f1c_4bd3_a479e199b67eb4dc" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
+// {{ 27 1 0 "6df03040_0f1c_4bd3_a479e199b67eb4dc" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
 abort;
 // }} ""
-// {{ 40 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 28 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
 /* {{ 1 "" "1" */ } /* }} "" */
@@ -27,4 +27,4 @@ abort;
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=ch33$$valid=0$$time=2026-03-06 10:49$$checksum=7d60f9ab$$length=083$$
+// $$author=ch33$$valid=0$$time=2026-03-06 11:00$$checksum=ff82e582$$length=083$$

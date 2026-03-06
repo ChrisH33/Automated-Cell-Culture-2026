@@ -15,6 +15,7 @@ namespace ACC_FUNCTIONS {
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function Abstract(  ) void ;
+function HHS_ShakingIncubation( variable intSpeed, variable blnSimMode, variable intTime ) void ;
 function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqFlaskAsp, sequence seqFlaskDisp, variable intVolume ) void ;
 // }} ""
 function _InitLibrary() {
@@ -57,26 +58,48 @@ private variable intLiquidType;
 private variable blnSimulationMode;
 // {{ 5 "PIP_Tilt_PBSWash" "InitLocals"
 // }} ""
-// {{{ 3 1 0 "f9c0607f_63da_4307_9bed563eef5f61f2" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 8 1 0 "f9c0607f_63da_4307_9bed563eef5f61f2" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 blnSimulationMode = HSLML_STAR::IsSimulatorMode(ML_STAR);
 // }} ""
-// {{ 4 1 0 "6c881ecb_85cb_4528_845392361f2df973" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 9 1 0 "6c881ecb_85cb_4528_845392361f2df973" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 intLiquidType = 1;
 // }} ""
-// {{{ 5 1 0 "904ce077_dccf_464b_ba722c0f7fac693f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 10 1 0 "904ce077_dccf_464b_ba722c0f7fac693f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::PIP_5mL_ResToFlask(ML_STAR, seqFlaskDisp, intVolume, intLiquidType);
 // }} ""
-// {{{ 6 1 0 "b1bf59e9_94c5_482c_bb03599a888ccc6b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 11 1 0 "b1bf59e9_94c5_482c_bb03599a888ccc6b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::TILT_Sway(blnSimulationMode, 10, 10, 15);
 // }} ""
-// {{{ 7 1 0 "d92178aa_bab4_4767_92dfd94c8801d09d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 12 1 0 "d92178aa_bab4_4767_92dfd94c8801d09d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::PIP_5mL_TiltToWaste(ML_STAR, seqFlaskAsp, intVolume, intLiquidType);
 // }} ""
 // {{{ 5 "PIP_Tilt_PBSWash" "End"
+}
+// }} ""
+// {{{ 5 "HHS_ShakingIncubation" "Begin"
+function HHS_ShakingIncubation( variable intSpeed, variable blnSimMode, variable intTime ) void {
+// }} ""
+private timer tmr;
+private variable rtn;
+// {{ 5 "HHS_ShakingIncubation" "InitLocals"
+// }} ""
+// {{{ 3 1 0 "fea61f0f_aa3c_4407_96a1b149da009da1" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::HHS_Shake(intSpeed);
+// }} ""
+// {{{ 4 1 0 "51dd15ea_3af0_4410_b66fa2efc095dedc" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::TMR_Start(blnSimMode, tmr, intTime);
+// }} ""
+// {{{ 5 1 0 "22fb0350_b6ae_4ee8_a10c467bb8168109" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::TMR_WaitFor(tmr, rtn);
+// }} ""
+// {{{ 6 1 0 "a19cc580_b68f_409f_a23556c2df6e80be" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ACC_PROCESSES::HHS_Shake(0);
+// }} ""
+// {{{ 5 "HHS_ShakingIncubation" "End"
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=ch33$$valid=0$$time=2026-03-06 10:49$$checksum=808f5847$$length=083$$
+// $$author=ch33$$valid=0$$time=2026-03-06 10:58$$checksum=e4532941$$length=083$$

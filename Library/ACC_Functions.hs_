@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 06/03/2026 10:49:19
+// Generated at 06/03/2026 10:58:59
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -8,6 +8,7 @@ namespace ACC_FUNCTIONS {
 function _InitLibrary() { }
 function _ExitLibrary() { }
 function Abstract(  ) void { }
+function HHS_ShakingIncubation( variable intSpeed, variable blnSimMode, variable intTime ) void { }
 function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqFlaskAsp, sequence seqFlaskDisp, variable intVolume ) void { }
 } // namespace
 #endif
@@ -15,4 +16,4 @@ function PIP_Tilt_PBSWash( device & ML_STAR, sequence seqFlaskAsp, sequence seqF
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-03-06 10:49$$checksum=49e1ffa4$$length=081$$
+// $$author=ch33$$valid=0$$time=2026-03-06 10:58$$checksum=17403904$$length=081$$
