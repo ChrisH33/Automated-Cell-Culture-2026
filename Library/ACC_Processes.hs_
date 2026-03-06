@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 06/03/2026 11:56:01
+// Generated at 06/03/2026 13:13:54
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -29,4 +29,4 @@ function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device &
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=ch33$$valid=0$$time=2026-03-06 11:56$$checksum=82dd89a8$$length=081$$
+// $$author=Hamilton$$valid=0$$time=2026-03-06 13:13$$checksum=972d0b42$$length=085$$
