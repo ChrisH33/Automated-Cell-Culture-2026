@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 09/04/2026 17:25:14
+// Generated at 16/04/2026 16:32:40
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -11,12 +11,13 @@ function Abstract(  ) void { }
 function HHS_Heat( variable intTemp ) void { }
 function HHS_Lock( variable blnGripState ) void { }
 function HHS_Shake( variable intSpeed ) void { }
+function PIP_5mL_FalconToFlask( device & ML_STAR, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_ResToFlask( device & ML_STAR, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToFalcon( device & ML_STAR, sequence & seqSource, sequence & seqDestination, variable intVolume, variable intLiquidType ) void { }
 function PIP_5mL_TiltToWaste( device & ML_STAR, sequence & seqSource, variable intVolume, variable intLiquidType ) void { }
 function SYSTEM_Abort( device & ML_STAR ) void { }
 function SYSTEM_Close( device & ML_STAR ) void { }
-function SYSTEM_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence, sequence seq_PBS, sequence seq_Media, sequence seq_TrypLE, sequence seq_Waste, variable blnSim ) void { }
+function SYSTEM_Init( device & ML_STAR, sequence seqCORE, sequence seq_5mLTipSequence, sequence seq_PBS, sequence seq_Media, sequence seq_TrypLE, sequence seq_Waste, sequence seq_Falcon, variable blnSim ) void { }
 function TILT_Angle( variable intTiltAngle ) void { }
 function TILT_Lock( variable blnGripState ) void { }
 function TILT_Sway( variable intSpeed, variable intEndAngle, variable intTime ) void { }
@@ -29,4 +30,4 @@ function TRP_OneWell_CORE( sequence seqSource, sequence seqDestination, device &
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=Hamilton$$valid=0$$time=2026-04-09 17:25$$checksum=c592a8c7$$length=085$$
+// $$author=Hamilton$$valid=0$$time=2026-04-16 16:32$$checksum=d8dab9b2$$length=085$$
