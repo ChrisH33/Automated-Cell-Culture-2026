@@ -6,20 +6,20 @@ function OnAbort(  ) void {
 // }} ""
 // {{ 5 "OnAbort" "InitLocals"
 // }} ""
-// {{{ 36 1 0 "1a7e2ed2_d120_4116_9525ca0b62bfbba6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 37 1 0 "1a7e2ed2_d120_4116_9525ca0b62bfbba6" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ACC_PROCESSES::SYSTEM_Abort(ML_STAR);
 // }} ""
 /* {{ 1 "" "0" */ if(0){  /* }} "" */
-// {{ 37 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 38 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 38 1 0 "57ebb88e_b406_459e_ae37ae3951d0ddbe" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 39 1 0 "57ebb88e_b406_459e_ae37ae3951d0ddbe" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 MECC::TraceComment(Translate("######################################\n\n                            METHOD ABORTED\n\n######################################"));
 // }} ""
-// {{ 39 1 0 "6df03040_0f1c_4bd3_a479e199b67eb4dc" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
+// {{ 40 1 0 "6df03040_0f1c_4bd3_a479e199b67eb4dc" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
 abort;
 // }} ""
-// {{ 40 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 41 1 0 "f814f39f_b422_497f_ac29d5d9a6f119a0" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
 /* {{ 1 "" "1" */ } /* }} "" */
@@ -27,4 +27,4 @@ abort;
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=Hamilton$$valid=0$$time=2026-04-16 16:32$$checksum=8822d986$$length=087$$
+// $$author=ch33$$valid=0$$time=2026-05-05 13:04$$checksum=61f0bc03$$length=083$$
